@@ -1,5 +1,10 @@
 package com.bsl.javacore.datatype;
-
+/**
+ * 
+ * @author bianshilong
+ * 
+ *
+ */
 public class Person {
 	private String name = "Rose";
 	private int age = 29;
@@ -21,8 +26,5 @@ public class Person {
 		Person person = new Person("James",37,false);
 		person.display();
 	}
-	
-	
-	
 	
 }
