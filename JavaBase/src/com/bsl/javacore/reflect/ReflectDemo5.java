@@ -7,26 +7,21 @@ import java.lang.reflect.Modifier;
 
 import com.bsl.javacore.datatype.Person;
 
-//反射实例，先构造反射类中的所有构造器，再返回指定的构造器，并赋值
+//反射实例，直接构造反射类中指定的构造器，以及指定的方法，指定的成员属性
 @SuppressWarnings("all")
-public class ReflectDemo4 {
+public class ReflectDemo5 {
 	public static void main(String[] args) throws Exception {
 		//获取class对象的方式
 		Class class1 = Student.class;
-		//返回反射类中所有的构造器
-		Constructor[] constructors = class1.getConstructors();
-		//返回反射类中制定的构造器
-		Student student = (Student) constructors[0].newInstance("lilei", 30);
+		//返回反射类中的指定的构造器
+		Constructor constructor = class1.getConstructor(java.lang.String.class,int.class);
+		Student student = (Student) constructor.newInstance("lisigua",48);
 		System.out.println(student);
-		//返回反射类中声明的方法
-		Method[] methods = class1.getDeclaredMethods();
-		//返回反射类中指定的声明方法
+		//返回反射类中指定的方法
 		Method method = class1.getDeclaredMethod("printSelf",int.class);
 		System.out.println(method);
 		//用反射来调用方法		
 		method.invoke(student,89356);
-		//返回反射类中所有的成员属性
-		Field [] fields = class1.getDeclaredFields();
 		//返回反射类中指定的成员属性
 		Field field = class1.getDeclaredField("name");
 		System.out.println(field);
