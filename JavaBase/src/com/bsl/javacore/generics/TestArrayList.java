@@ -24,7 +24,7 @@ public class TestArrayList {
 		display(list2);
 
 	}
-
+	//类型通配符
 	public static void display(ArrayList<?> list) {
 		for (Object string : list) {
 			System.out.println(string);

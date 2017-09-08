@@ -1,7 +1,7 @@
 package com.bsl.javacore.generics;
 
 public class TestPerson {
-
+	//泛型类的实例
 	public static void main(String[] args) {
 		Person<String> person1 = new Person<String>();
 		
@@ -16,7 +16,6 @@ public class TestPerson {
 		String info2 = person2.getName() + ":" + person2.getPass();
 		System.out.println(info2);
 		
-
 	}
 
 }

@@ -1,13 +1,13 @@
 package com.bsl.javacore.generics;
-
+//有限制的泛型，限制类型参数
 public class Point<T extends Number> {
 	private T x;
 	private T y;
-
+	//无参方法
 	public Point() {
 
 	}
-
+	//有参方法
 	public Point(T x, T y) {
 		this.x = x;
 		this.y = y;

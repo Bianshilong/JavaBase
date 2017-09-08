@@ -1,6 +1,6 @@
 package com.bsl.javacore.generics;
 
-
+//泛型方法的使用，可以为多个类型同时使用，避免多次编写代码，导致重复劳动，以及维护成本
 public class Test {
 
 	public static void main(String[] args) {
@@ -17,10 +17,8 @@ public class Test {
 		System.out.println(integer1);
 		System.out.println(integer2);
 		
-		
-		
 	}
-	
+	//泛型方法
 	public <T> T evalutor(T a,T b) {
 		if (a.equals(b)) {
 			return a;
