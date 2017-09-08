@@ -8,7 +8,7 @@ import java.lang.reflect.Modifier;
 //反射
 public class ReflectDemo2 {
 	@SuppressWarnings("all")    //压制所有警告
-	public static void main(String[] args){
+	public static void main(String[] args) throws Exception{
 		
 		Class class1 = Student.class;
 
@@ -32,6 +32,11 @@ public class ReflectDemo2 {
 		for (Constructor constructor : constructors) {
 			System.out.println(constructor);
 		}
+		
+		//返回反射类的制定的构造函数
+		System.out.println("0个参数的制定构造器：");
+		Constructor constructor = class1.getConstructor();		
+		System.out.println(constructor);
 		
 		//返回反射类的所有的方法，包括继承来的方法
 		Method[] methods = class1.getMethods();

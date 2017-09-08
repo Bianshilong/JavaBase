@@ -6,8 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Student implements Comparable<Student> {
-	private String name;
-	private int age;
+	private String name = "zhangsan";
+	private int age = 29;
+	public int sex = 90;
 
 	//3个构造函数
 	public Student() {
@@ -59,5 +60,12 @@ public class Student implements Comparable<Student> {
 			return 1;
 		}
 	}
-
+	
+	private void printSelf() {
+		System.out.println("printSelf() : Student [name=" + name + ", age=" + age + "]");
+	}
+	
+	public void printSelf(int num) {
+		System.out.println("printSelf() : Student [name=" + name + ", age=" + age + ",num= " + num + "]");
+	}
 }
