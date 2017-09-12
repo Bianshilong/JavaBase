@@ -12,17 +12,15 @@ public class ArrayDemo3 {
 			System.out.print("num[" + i + "] = " + num[i] + "  ");
 		}
 		System.out.println();
-		int[] num1 = new int[num.length];
-		num1[0] = num[0];
 		System.out.println("排序后的数组为：");
 		// 使用循环为数组排序
 		for (int i = 0; i < num.length; i++) {
-			for (int j = 0; j < num.length; j++) {
-				if (num1[i] < num[j]) {
+			for (int j = i+1; j < num.length; j++) {
+				if (num[j] <num[i]) {
+					num[i] = num[j];
 				}
-				num1[i] = num[j];
 			}
-			System.out.print("num1[" + i + "] = " + num1[i] + "  ");
+			System.out.print("num1[" + i + "] = " + num[i] + "  ");
 		}
 
 	}
