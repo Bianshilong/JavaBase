@@ -30,7 +30,8 @@ class MyThread1 extends Thread {
 		for (int i = 0; i < n; i++) {
 			if (i%2==0) {
 				System.out.println(threadName+"数据让步：");
-				yield();
+				yield();    //继承父类的yield方法；
+
 			}
 			sum += i;
 			System.out.println(threadName + "第" + i + "个数自加的结果为：" + sum);
@@ -50,14 +51,14 @@ class MyRunnable1 implements Runnable {
 		for (int i = 0; i < m; i++) {
 			if (i%2!=0) {
 				System.out.println(threadName+"数据让步：");
-				yield();
+				yield();    //需要自己写yield的方法
 			}
 			System.out.println(threadName + "输出的第" + i + "数据为：" + i);
 		}
 
 	}
-
-	private void yield() {   //为什么要构造一个方法
+	
+	private void yield() {   
 		 
 	}
 }
