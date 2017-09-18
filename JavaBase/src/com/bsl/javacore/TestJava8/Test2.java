@@ -1,5 +1,6 @@
-package com.bsl.javacore.Test;
+package com.bsl.javacore.TestJava8;
 
+//输出等腰三角形
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

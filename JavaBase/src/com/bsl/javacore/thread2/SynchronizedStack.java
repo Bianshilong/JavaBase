@@ -8,12 +8,12 @@ public class SynchronizedStack {
 	public synchronized void push(char c) {
 		while (index == data.length) {
 			try {
-				this.wait();
+				this.wait();    //线程等待后，后面的代码不会继续运行。
 			} catch (InterruptedException e) {
 			}
 
 		}
-		this.notify();
+		this.notify();   //线程通知，后面的代码会继续运行
 		data[index] = c;
 		index++;
 	}
