@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import javax.print.attribute.IntegerSyntax;
 
 public class StreamDemo {
 	public static void main(String[] args) {
