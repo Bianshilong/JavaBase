@@ -3,59 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <title>注册页面</title>
+<link rel="short cut icon" href="/iSite/favicon.ico" />
+<link rel="stylesheet" href="./css/rgCss.css" type="text/css"/>
 </head>
 <body>
-	<br />
-	<br />
-	<table >
-		<tr>
-			<td rowspan="8"></td>
-			<td>用户名:</td>
-			<td><input type="text" required="required" /></td>
-			<td>（大写字母、小写字母、数字或文字）</td>
-		</tr>
-		<tr>
-			<td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
-			<td><input type="password" /></td>
-			<td>（长度为6-12为，包含数字、大小写字母、特殊符号等；需以大写字母开头）</td>
-		</tr>
-		<tr>
-			<td>确认密码：</td>
-			<td><input type="password" /></td>
-			<td>（长度为6-12为，包含数字、大小写字母、特殊符号等；需以大写字母开头）</td>
-		</tr>
-		<tr>
-			<td>邮箱：</td>
-			<td><input type="text" required="required" /></td>
-			<td>支持：QQ、网易、新浪</td>
-		</tr>
-		<tr>
-			<td>性别：</td>
-			<td>男<input name="sex" type="radio" checked="checked"/>&nbsp;&nbsp;&nbsp;女<input name="sex" type="radio " /></td>
-			<td rowspan="4"><textarea rows="10" cols="50">
-			</textarea>
-			</td>
-		</tr>
-		<tr>
-			<td>兴趣部落：</td>
-			<td><select>
-				<option value="1" selected="selected">DOTA</option>
-				<option value="2">LOL</option>
-				<option value="3">真三</option>
-				<option value="4">DOTA2</option>
-			</select></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>出生日期：</td>
-			<td><input type="date" /></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><input type="submit" /></td>
-			<td><input type="reset" /></td>
-			<td></td>
-		</tr>
-	</table>
+	<br>
+	<br>
+	<div width="40px" height="120px" align="center" >
+		<img src="../img/logo.png" align="middle">
+		<span class="sp">请填写注册信息</span>
+		
+	</div>
+	<hr size="15px" width="60%" color="PapayaWhip" />
+	<div width="500px"; height="800px"; align="center">
+		<table>
+			<tr>
+				<td rowspan="8"></td>
+				<td>用户名:</td>
+				<td><input type="text" required="required" /></td>
+				<td>（４-8位，字母，数字，符号）</td>
+			</tr>
+			<tr>
+				<td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+				<td><input type="password" /></td>
+				<td>（6-12位，字母，数字，符号）</td>
+			</tr>
+			<tr>
+				<td>密码确认：</td>
+				<td><input type="password" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>邮箱：</td>
+				<td><input type="text" required="required" /></td>
+				<td>（支持：QQ、网易、新浪）</td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>男<input name="sex" type="radio" checked="checked" />&nbsp;&nbsp;&nbsp;
+					女<input name="sex" type="radio" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>兴趣部落：</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>出生日期：</td>
+				<td><input type="date" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="submit" /></td>
+				<td><input type="reset" /></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
