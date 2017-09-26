@@ -1,5 +1,9 @@
 package com.bsl.javacore.test;
 
+import java.util.Scanner;
+
+
+
 public class Test1 {
 
 	public static void main(String[] args) {
@@ -11,6 +15,6 @@ public class Test1 {
 
 		System.out.println(i1 == i2);
 		System.out.println(i3 == i4);
-	}
 
+	}
 }
