@@ -15,7 +15,7 @@ public class Test1 {
 			}
 			System.out.println("请输入偏移量：");
 			a = input.nextInt();
-			while (a <= 0) {
+			while (a <0) {
 				System.out.println("请输入正整数！");
 				a = input.nextInt();
 			}
