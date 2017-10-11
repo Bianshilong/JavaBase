@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>My First JSP</title>
 </head>
 <body>
 	<%-- 这是一个只有我能看到的注释 --%>
@@ -17,6 +17,7 @@
 	i = <%=i %>;
 	<br/>
 	Today is <%= day %>;
+	
 	
 </body>
 </html>
