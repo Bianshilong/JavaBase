@@ -10,7 +10,7 @@
 	<% 
 	if(session.getAttribute("userId") != null){
 	%>
-		<h2>欢迎<%=session.getAttribute("userId") %>，光临本系统  <a href="loginOut.jsp">注销!</a></h2>	
+		<h2>欢迎<%=session.getAttribute("userId") %>光临本系统  <a href="loginOut.jsp">注销!</a></h2>	
 	<%
 	}else{
 	%>
