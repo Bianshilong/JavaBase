@@ -7,7 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	name : <%=request.getParameter("name") %>;
-	age : <%=request.getParameter("age") %>
+	<% 
+	if(session.getAttribute("userId") != null){
+	%>
+		<h2>欢迎<%=session.getAttribute("userId") %>，光临本系统  <a href="loginOut.jsp">注销!</a></h2>	
+	<%
+	}else{
+	%>
+		<h2>请先进行<a href="login.jsp">登录！</a></h2>
+	<%
+	}
+	%>
 </body>
 </html>

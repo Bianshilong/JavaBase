@@ -1,6 +1,9 @@
 package bean;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter@Setter
 public class BookBean {
 	
 	private String BookName="";
@@ -8,7 +11,8 @@ public class BookBean {
 	
 	public BookBean() {
 	}
-	public  void setBookName(String BookName) {
+	//将lombok架包复制粘贴至WEBContent-(WEB-INF)-lib文件夹中，即可产生作用
+	/*public  void setBookName(String BookName) {
 		this.BookName=BookName;
 	}
 	public  String getBookName() {
@@ -19,5 +23,5 @@ public class BookBean {
 	}
 	public  int getBookNum() {
 		return this.BookNum;
-	}
+	}*/  
 }

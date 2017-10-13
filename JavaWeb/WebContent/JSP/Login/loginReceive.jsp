@@ -12,13 +12,11 @@
 		String pwd=request.getParameter("passWord");
 		if(name.equals("Merry")&& pwd.equals("123456"))
 		{%>
-		<jsp:forward page="loginCorrect.html" />
+		<jsp:forward page="Correct.jsp">
+		</jsp:forward>	
 		<% }
 		else{	%>
 		<jsp:forward page="loginError.html"></jsp:forward>
-		
 		<% }%>
-	
-	
 </body>
 </html>
