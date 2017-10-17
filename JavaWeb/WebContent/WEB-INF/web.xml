@@ -14,4 +14,12 @@
   	<param-name>name</param-name>
   	<param-value>zhangsan</param-value>
   </context-param>
+  <servlet>
+    <servlet-name>ServletDemo</servlet-name>
+  	<servlet-class>com.bsl.servlet.ServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletDemo</servlet-name>
+  	<url-pattern>/servlet/ServletDemo</url-pattern>
+  </servlet-mapping>
 </web-app>
