@@ -11,11 +11,11 @@
 		//request.setCharacterEncoding("ISO-8859-1");
 		//String name=request.getParameter("name");
 		//String newName= new String(name.getBytes("ISO-8859-1"),"utf-8");
-		String s=new String(request.getParameter("name").getBytes("ISO-8859-1"),"gb2312") ;
-		System.out.println("********:"+s);
+		//String s=new String(request.getParameter("name").getBytes("ISO-8859-1"),"gb2312") ;
+		//System.out.println("********:"+s);
 		//System.out.println("********:"+name);
 	%>
-	name : <%= s%>;
+	name : <%= request.getParameter("name")%>;
 	age : <%=request.getParameter("age") %>
 </body>
 </html>

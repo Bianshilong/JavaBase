@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<% 
+	//避免乱码，如果在include页面设置时，已经迟了。需要在本页面设置
+	request.setCharacterEncoding("UTF-8"); 
+	%>
 	<p align="center">新书展示</p><hr>
 		<table border="1" align="center">
 			<tr><td>
