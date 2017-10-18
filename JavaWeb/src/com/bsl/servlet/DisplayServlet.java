@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/DisplayServlet")
+@WebServlet("/display")
 public class DisplayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response) 
 		throws ServletException,IOException{
 		
-		String str1=(String) request.getAttribute("formRequest");
+		String str1=(String) request.getAttribute("fromRequest");
 		HttpSession session=request.getSession();
 		String str2=(String) session.getAttribute("fromSession");
 		ServletContext context=request.getServletContext();
