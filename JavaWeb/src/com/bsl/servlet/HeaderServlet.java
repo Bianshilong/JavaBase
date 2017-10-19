@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +32,6 @@ public class HeaderServlet extends HttpServlet {
 		out.println("<marquee><font size=3 color='#000099'>Seconds sales of export quality Germents "
 				+ "at Rockford Hall, new Delhi.</font></marquee>");
 		out.println("<hr/>");
-		out.close();
-		
+		//out.close();   此处不能关闭流，如果关闭，回到包含页面，也就输出完结，不再继续输出！！！
 	}
 }

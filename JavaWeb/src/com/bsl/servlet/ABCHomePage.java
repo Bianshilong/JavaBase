@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-//@WebServlet("/include/ABC")
-@WebServlet("/forward/ABC")
+
+@WebServlet("/ABCHomePage")
 public class ABCHomePage extends HttpServlet {
 
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
@@ -29,17 +29,17 @@ public class ABCHomePage extends HttpServlet {
 		out.println("<body>");
 		ServletContext context=getServletContext();
 		RequestDispatcher rd = context.getRequestDispatcher("/servlet/HeaderServlet");
-//		rd.include(request, response);
-		rd.forward(request, response);
-		out.println("<font size=4 color='#000099'");
+		rd.include(request, response);
+//		rd.forward(request, response);
+		out.println("<font size=4 color='#000099'>");
 		out.println("&nbsp;&nbsp;ABC Limited founded in 1890 is a multinational "
 				+ "company spread across six nations.<br><br>");
 		out.println("We deal with garment export and online sales of designer wares.<br><br>");
 		out.println("To have a look at our fascinating collection check out at "
 				+ "<a href='www.abcdesign.com'>ABC Designs</a></font><br><br>");
 		rd=context.getRequestDispatcher("/servlet/Footer.html");
-//		rd.include(request, response);
-		rd.forward(request, response);
+		rd.include(request, response);
+//		rd.forward(request, response);
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

@@ -14,7 +14,7 @@ public class SendError extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) 
 		throws ServletException,IOException{
 		
-		response.sendError(HttpServletResponse.SC_GONE,"Resource no longer available");
+		response.sendError(HttpServletResponse.SC_GONE,"我是错误页");
 		
 	}
 	
