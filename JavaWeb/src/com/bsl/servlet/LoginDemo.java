@@ -14,12 +14,11 @@ public class LoginDemo extends HttpServlet {
 
 	public void doPost(HttpServletRequest request,HttpServletResponse response)
 		throws ServletException,IOException{
-		
 		response.setContentType("text/html;charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out=response.getWriter();
 		out.println("<html>");
-		out.println("<meta charset=\"UTF-8\">");
+//		out.println("<meta charset=\"UTF-8\">");   //只能设置当前部分的字符集，如包含页面有其他内容，不对其他内容起作用
 		out.println("<head><title>登录页面</title></head>");
 		out.println("<body>");
 		out.println("<h3>请输入用户信息:</h3>");

@@ -15,6 +15,9 @@ public class EnterDemo extends HttpServlet {
 
 	public void doPost(HttpServletRequest request,HttpServletResponse response) 
 		throws ServletException,IOException{
+		//request
+		response.setContentType("text/html;charset=UTF-8");    //设置当前页面的输出文档类型，及字符集
+//		response.setCharacterEncoding("UTF-8");   该指令无效
 		String name=request.getParameter("username");
 		String pws=request.getParameter("password");
 		if ("zhangsan".equals(name) && "123456".equals(pws)) {
@@ -26,5 +29,9 @@ public class EnterDemo extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/servlet/LoginDemo");
 			rd.include(request, response);
 		}
+	}
+	public void doGet(HttpServletRequest request,HttpServletResponse response) 
+			throws ServletException,IOException{
+		doPost(request, response);
 	}
 }
