@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class LogFilter
  */
-@WebFilter(filterName="log",urlPatterns= {"/*"})
+@WebFilter(filterName="log",urlPatterns= {"/EnterDemo"})
 public class LogFilter implements Filter {
 	//Filter接口有３个方法，都需要实现，init(),doFilter(),destroy()
 	//FilterConfig可用于访问Filter的配置信息

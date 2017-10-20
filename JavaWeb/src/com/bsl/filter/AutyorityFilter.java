@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
  * Servlet Filter implementation class AutyorityFilter
  */
 @WebFilter(filterName="Authority",
-		urlPatterns= {"/*"},
+		urlPatterns= {"/EnterDemo"},
 		initParams= {@WebInitParam(name="encoding",value="UTF-8"),
 		@WebInitParam(name="loginPage",value="/filter/login.jsp"),
 		@WebInitParam(name="proLogin",value="/filter/proLogin.jsp")}
