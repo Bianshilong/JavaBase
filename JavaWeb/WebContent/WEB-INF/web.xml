@@ -43,36 +43,4 @@
     <url-pattern>/InitParameter</url-pattern>
     <url-pattern>/info</url-pattern>
   </servlet-mapping>
-  <filter>
-    <filter-name>UsernameFilter</filter-name>
-    <filter-class>com.bsl.filter.UsernameFilter</filter-class>
-    <init-param>
-      <param-name>username</param-name>
-      <param-value>Tom</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>UsernameFilter</filter-name>
-    <url-pattern>/login1.jsp</url-pattern>
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>FORWARD</dispatcher>
-    <dispatcher>INCLUDE</dispatcher>
-    <dispatcher>ERROR</dispatcher>
-  </filter-mapping>
-  <filter>
-    <filter-name>PasswordFilter</filter-name>
-    <filter-class>com.bsl.filter.PasswordFilter</filter-class>
-    <init-param>
-      <param-name>password</param-name>
-      <param-value>1234</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>PasswordFilter</filter-name>
-    <url-pattern>/login1.jsp</url-pattern>
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>FORWARD</dispatcher>
-    <dispatcher>INCLUDE</dispatcher>
-    <dispatcher>ERROR</dispatcher>
-  </filter-mapping>
 </web-app>
