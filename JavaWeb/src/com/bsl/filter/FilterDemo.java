@@ -32,7 +32,7 @@ public class FilterDemo implements Filter {
 		HttpServletRequest request2 =(HttpServletRequest) request;
 		System.out.println("FilterDemo 开始拦截...");
 		
-//		chain.doFilter(request, response);
+		chain.doFilter(request, response);    //调用链上的一个Filter或Servlet，如果没有，就相当拦截了Filter
 		System.out.println("拦截的URL："+request2.getRequestURL());
 		//获取URL后的查询串
 		String queryString = request2.getQueryString();
