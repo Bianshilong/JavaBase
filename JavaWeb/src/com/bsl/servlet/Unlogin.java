@@ -28,14 +28,15 @@ public class Unlogin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+//		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head>");
+		out.println("<meta charset=\"UTF-8\">");
 		out.println("<body>");
 		out.println("<h2>没有登录</h2>");
-		out.println("<h3>5秒后将跳转至登录页面！！！</h３>");
+		out.println("<h3>5秒后将跳转至登录页面！！！</h3>");
 		out.println("</body>");
 		out.println("</head>");
 		out.println("<html>");

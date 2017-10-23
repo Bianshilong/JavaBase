@@ -1,6 +1,8 @@
 package com.bsl.filter;
 
 import java.io.IOException;
+
+import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -8,12 +10,16 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet Filter implementation class PasswordFilter
  */
-//@WebFilter("/login1.jsp")
+@WebFilter(dispatcherTypes = {DispatcherType.REQUEST,DispatcherType.INCLUDE,
+		  DispatcherType.INCLUDE,DispatcherType.ERROR},
+initParams={@WebInitParam(name="password",value="1234")}
+, urlPatterns = { "/filter/hello.jsp" })
 public class PasswordFilter implements Filter {
 
 	private String password;
@@ -28,8 +34,8 @@ public class PasswordFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
 		HttpServletResponse resp = (HttpServletResponse) response;
-		if (!request.getParameter("password").equals(password)) {
-			resp.sendRedirect("login1.jsp");
+		if (!(password.equals(request.getParameter("password")))) {
+			resp.sendRedirect("/MyJavaWeb/filter/login1.jsp");
 		}else {
 		
 		chain.doFilter(request, response);

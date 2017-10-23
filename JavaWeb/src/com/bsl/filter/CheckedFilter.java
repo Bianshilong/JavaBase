@@ -36,10 +36,9 @@ public class CheckedFilter implements Filter {
 		HttpServletRequest hreq = (HttpServletRequest) request;
 		HttpServletResponse hres = (HttpServletResponse) response;
 		HttpSession hSession = hreq.getSession();
-		//hres.setCharacterEncoding("UTF-8");           //未起作用
 		String username= (String) hSession.getAttribute("username");
 		String tem = hreq.getRequestURI();
-		System.out.println(tem);
+//		System.out.println(tem);        //打印确定tem
 		hSession.setAttribute("temurl", tem);       //记录当前要访问的页面url
 		if (username==null || username=="") {
 			hreq.getRequestDispatcher("/Unlogin").include(request, response);
