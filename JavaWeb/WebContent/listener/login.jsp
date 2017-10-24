@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form name="form1" method="post" action="loginReceive.jsp">
-		姓名<input name="userid" type="text" size="12" />
+		姓名<input type="text" name="userid" size="12" />
 		<br>
 		<!-- 密码<input name="passWord" type="password" size="12" />
 		<br> -->

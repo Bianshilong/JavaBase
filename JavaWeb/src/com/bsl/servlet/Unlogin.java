@@ -36,7 +36,7 @@ public class Unlogin extends HttpServlet {
 		out.println("<meta charset=\"UTF-8\">");
 		out.println("<body>");
 		out.println("<h2>没有登录</h2>");
-		out.println("<h3>5秒后将跳转至登录页面！！！</h3>");
+		out.println("<h3>3秒后将跳转至登录页面！！！</h3>");
 		out.println("</body>");
 		out.println("</head>");
 		out.println("<html>");

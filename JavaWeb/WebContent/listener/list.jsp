@@ -9,8 +9,10 @@
 <body>
 	<h2>在线用户列表</h2>
 	<%
-		Set all = (Set) this.getServletContext().getAttribute("online");
+		Set all = (Set) this.getServletContext().getAttribute("onl");
+		out.println("在线用户人数是："+all.size());
 		Iterator iter=all.iterator();
+		out.println("在线用户为：");
 		while(iter.hasNext()){
 	%>
 		<%= iter.next()%>

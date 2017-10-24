@@ -24,4 +24,10 @@ public class BookBean {
 		this.bookName = bookName;
 		this.bookNum = bookNum;
 	}
+
+	@Override
+	public String toString() {
+		return "BookBean [bookName=" + bookName + ", bookNum=" + bookNum + "]";
+	}
+	
 }
