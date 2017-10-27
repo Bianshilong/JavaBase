@@ -82,6 +82,8 @@ public class CountedNumber implements ServletContextListener,
 			all.remove(se.getSession().getAttribute("userid"));
 		}
 		this.app.setAttribute("onl", all);
+		//打印销毁会话所用时间，需要在web.xml中设置会话有效时间
+		System.out.println("session--持续时间:"+(System.currentTimeMillis()-se.getSession().getLastAccessedTime())+"ms");
     }
     //session创建
     public void sessionCreated(HttpSessionEvent se) {

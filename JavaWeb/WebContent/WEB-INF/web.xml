@@ -43,4 +43,8 @@
     <url-pattern>/InitParameter</url-pattern>
     <url-pattern>/info</url-pattern>
   </servlet-mapping>
+  <session-config>
+ 	 <!--设置会话失效时间  -->
+  	<session-timeout>10</session-timeout>
+  </session-config>
 </web-app>
