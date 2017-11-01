@@ -13,11 +13,13 @@ public class ArrayDemo3 {
 		}
 		System.out.println();
 		System.out.println("排序后的数组为：");
-		// 使用循环为数组排序
+		// 使用冒泡方式为数组排序
 		for (int i = 0; i < num.length; i++) {
 			for (int j = i+1; j < num.length; j++) {
 				if (num[j] <num[i]) {
+					int temp = num[i];
 					num[i] = num[j];
+					num[j] = temp;
 				}
 			}
 			System.out.print("num1[" + i + "] = " + num[i] + "  ");
