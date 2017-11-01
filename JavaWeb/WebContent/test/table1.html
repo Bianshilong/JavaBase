@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.coll{border-collapse: collapse;
+	width:600;}
+.yanse{background:lightgray;font-style:italic;font-size: 30px;}
+.yanse1{background:lightgray;font-style:italic;font-size: 40px;}
+.cls{width: 99%;height: 28px;border: 0;}
+</style>
+</head>
+<!-- 表单版简历 -->
+<body>
+	<form action="" align="center" method="post">
+		<table class="coll" border="1" align="center">
+		<tr class = "yanse1" align="center"><td colspan="7">个人简历</td></tr>
+		<tr align="center">
+			<td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+			<td width="100"><input type="text" class="cls" width="20"/></td>
+			<td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+			<td><input type="radio" name="sex" checked="checked">男<input type="radio" name="sex">女</td> 
+			<td>籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：</td>
+			<td><input type="text" class="cls" /></td>
+			<td rowspan="6"><input type="file" name="img"/></td>
+		</tr>
+		<tr align="center">
+			<td>出生日期：</td>
+			<td><input type="date" class="cls"/></td>
+			<td>民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族：</td>
+			<td><input type="text" class="cls"/></td>
+			<td>现所在地：</td>
+			<td><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td>婚姻状况：</td>
+			<td>
+				<select class="cls">
+					<option name="hy" value="未婚" selected="selected">未婚</option>
+					<option name="hy" value="已婚" >已婚</option>
+					<option name="hy" value="保密" >保密</option>
+				</select>
+			</td>
+			<td>政治面貌：</td>
+			<td>
+				<select class="cls">
+					<option name="zz" value="党员">党员</option>
+					<option name="zz" value="预备党员" >预备党员</option>
+					<option name="zz" value="团员" >团员</option>
+					<option name="zz" value="民主党派" >民主党派</option>
+					<option name="zz" value="群众" selected="selected">群众</option>
+				</select>
+			</td>
+			<td>最高学历：</td>
+			<td>
+				<select class="cls">
+					<option name="xl" value="博士及以上">博士及以上</option>
+					<option name="xl" value="硕士" >硕士</option>
+					<option name="xl" value="本科" selected="selected">本科</option>
+					<option name="xl" value="大专" >大专</option>
+					<option name="xl" value="高中及以下">高中及以下</option>
+				</select>
+			</td>
+		</tr>
+		<tr align="center">
+			<td>所学专业：</td>
+			<td><input type="text" class="cls"/></td>
+			<td>毕业院校：</td>
+			<td><input type="text" class="cls"/></td>
+			<td>毕业时间：</td>
+			<td><input type="date" class="cls"/></td>
+		
+		</tr>
+		<tr align="center">
+			<td>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</td>
+			<!-- <td colspan="2"><input type="text" class="cls"/></td> -->
+			<td colspan="2"><input type="tel" maxlength="11" class="cls"/></td>
+			<td width="80">电子邮箱：</td>
+			<td colspan="2"><input type="email" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td>求职意向：</td>
+			<td colspan="5"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td class = "yanse" colspan="7">教育/培训经历</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">起止时间</td>
+			<td colspan="2">学校/培训地</td>
+			<td colspan="2">专业/课程</td>
+			<td >学历/证书</td>
+		</tr>	
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td class = "yanse" colspan="7">工作经验</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">起止时间</td>
+			<td colspan="2">公司名称</td>
+			<td colspan="3">职位及简单描述</td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="3"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="3"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="3"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center" height="25">
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="2"><input type="text" class="cls"/></td>
+			<td colspan="3"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td rowspan="2" colspan="2" class = "yanse">技能专长</td>
+			<td>专长</td>
+			<td colspan="4"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td>爱好</td>
+			<td colspan="4"><input type="text" class="cls"/></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2" class = "yanse">自我评价</td>
+			<td colspan="5"><textarea cols="100" rows="20" class="cls"/></textarea></td>
+			<!-- <td colspan="5"><input type="text" class="cls"/></td> -->
+		</tr>
+		<tr align="center">
+			<td colspan="2" class = "yanse">备注</td>
+			<td colspan="5"><input type="text" class="cls"/></td>
+		</tr>
+	</table>
+	<input type="submit" value="提交"/>　<input type="submit" value="重置"/>
+	</form>
+</body>
+</html>
