@@ -1,4 +1,4 @@
-package com.bsl.java.common11;
+package com.bsl.java.abstractAndinterface11;
 //抽象类的实例化
 /*子类中所有的构造方法默认都会访问父类中空参构造方法--->也就是说，子类new对象的时候，
 先去父类中逛了一圈，完成了父类的初始化（父类初始化值存在子类new对象开辟堆内存的某块地方）

@@ -1,4 +1,4 @@
-package com.bsl.java.common11;
+package com.bsl.java.abstractAndinterface11;
 //接口继承多个接口，再被实现类实现
 public class TestInterfaceDemo2 {
 

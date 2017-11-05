@@ -1,4 +1,4 @@
-package com.bsl.java.common11;
+package com.bsl.java.abstractAndinterface11;
 
 public class Worker extends Person {
 	

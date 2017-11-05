@@ -1,4 +1,4 @@
-package com.bsl.java.common11;
+package com.bsl.java.abstractAndinterface11;
 //接口的实现类实例
 public class TestInterfaceDemo {
 

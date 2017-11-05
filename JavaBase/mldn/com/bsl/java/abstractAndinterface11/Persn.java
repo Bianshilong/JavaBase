@@ -1,4 +1,4 @@
-package com.bsl.java.common11;
+package com.bsl.java.abstractAndinterface11;
 
 public interface Persn {
 	String name="张三";
