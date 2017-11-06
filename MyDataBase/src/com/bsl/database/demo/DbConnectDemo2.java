@@ -5,9 +5,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Connection;
 
-public class DbConnectDemo {
+public class DbConnectDemo2 {
 	public static final String DBDRIVER = "com.mysql.jdbc.Driver";
-	public static final String DBURL = "jdbc:mysql://localhost:3306/bsl_demo?useSSL=false";
+	public static final String DBURL = "jdbc:mysql://localhost:3306/bsl_demo";
 	public static final String DBUSER = "root";
 	public static final String DBPWD = "root";
 	public static void main(String[] args) throws Exception {
