@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/MyJNDI" docBase="/home/ssyy/eclipse-workspace/MyJNDI"
+<Context path="/MyJNDI" docBase="D:\GitHub\JavaBase\MyJNDI"
 	privileged="true" reloadable="true">
 	<Resource name="dashabi" auth="Container" type="javax.sql.DataSource"
 		driverClassName="org.gjt.mm.mysql.Driver" 

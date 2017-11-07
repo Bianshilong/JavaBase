@@ -15,14 +15,14 @@
 <body>
 	<%
 		Context cxt = new InitialContext();
-		Context envContext = (Context) cxt.lookup("java:comp/env");
+		/* Context envContext = (Context) cxt.lookup("java:comp/env"); */
 		DataSource ds = (DataSource) cxt.lookup("java:comp/env/dashabi");
 		Connection conn = ds.getConnection();
 		Statement st = conn.createStatement();
 		ResultSet rs = st.executeQuery("select * from stu");
 		while(rs.next()){
-			out.println(rs.getInt(1)+"\t"+rs.getInt(2)+"\t"+
-				rs.getInt(3)+"\t"+rs.getInt(4)+"</br>");
+			out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+
+				rs.getInt(3)+"\t"+rs.getString(4)+"</br>");
 		}
 	
 	
