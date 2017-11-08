@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/MyJNDI" docBase="D:\GitHub\JavaBase\MyJNDI"
 	privileged="true" reloadable="true">
-	<Resource name="dashabi" auth="Container" type="javax.sql.DataSource"
+	<Resource name="jdbc/jndi" auth="Container" type="javax.sql.DataSource"
 		driverClassName="org.gjt.mm.mysql.Driver" 
 		url="jdbc:mysql://localhost:3306/bsl_demo"
 		username="root" password="root" maxActive="8"
