@@ -28,8 +28,8 @@ class SleepTest implements Runnable{
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				System.out.println("name="+name);
 			}
+			System.out.println("name="+name);
 		}
 		System.out.println(name+"----->离开loop方法");
 	}
