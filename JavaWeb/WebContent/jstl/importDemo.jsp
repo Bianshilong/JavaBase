@@ -9,6 +9,6 @@
 </head>
 <body>
 	<c:import url="http://www.baidu.com" var="baidu" scope="session" charEncoding="utf-8"/>
-	${baidu}"
+	${baidu}
 </body>
 </html>
