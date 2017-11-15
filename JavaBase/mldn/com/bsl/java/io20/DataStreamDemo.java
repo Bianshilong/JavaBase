@@ -29,8 +29,33 @@ public class DataStreamDemo {
 		//将数据读出
 		FileInputStream fis = new FileInputStream(file);
 		DataInputStream dis = new DataInputStream(fis);
-		
-		
+		double price;
+		int unit;
+		StringBuffer desc;
+		double total=0.0;
+			try {
+				//当文本被全部读出，会抛出EOFException异常，中断循环
+				while (true) {
+					//读出价格
+					price=dis.readDouble();
+					//跳过tab
+					dis.readChar();
+					unit=dis.readInt();
+					dis.readChar();
+					char chr;
+					desc=new StringBuffer();
+					while ((chr=dis.readChar())!='\n') {
+						desc.append(chr);
+					}
+					System.out.println("订单信息："+"产品名称："+desc+",\t数量："+unit+",\t价格："+price);
+					total=total+unit*price;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.println("\n总共需要："+total+"元");
+			}
+		dis.close();
 	}
 }
 
