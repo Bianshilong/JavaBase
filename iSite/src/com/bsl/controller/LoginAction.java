@@ -1,4 +1,4 @@
-package com.bsl.chklogin;
+package com.bsl.controller;
 
 import lombok.Getter;
 import lombok.Setter;
