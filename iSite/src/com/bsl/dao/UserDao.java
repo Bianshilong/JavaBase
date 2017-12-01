@@ -6,9 +6,9 @@ import com.bsl.entity.User;
 
 public interface UserDao {
 	
-	public Long save(User user);
+	public Long insert(User user);
 	public void update(User user);
 	public void delete(User user);
-	public User findById(Long id);
-	public List<User> findAll();
+	public User getUserById(Long id);
+	public List<User> getUserList();
 }
