@@ -74,4 +74,13 @@ public class UserDaoImpl implements UserDao {
 		return list;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override			//通过用户名和密码来查找
+	public List<User> getUserByNameAndPass() {
+		session=geSession();
+		List<User> list = session.createQuery("select u.username,u.password from User u").getResultList();
+		session.close();
+		return list;
+	}
+
 }

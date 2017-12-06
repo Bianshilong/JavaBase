@@ -10,5 +10,6 @@ public interface UserService {
 	public void update(User user);
 	public void delete(User user);
 	public User selectOnlyOne(long id);
+	public List<User> findByNameAndPass();
 	public List<User> selectAll();
 }

@@ -1,4 +1,4 @@
-package com.bsl.com.action;
+package com.bsl.action;
 
 import com.bsl.controller.Controller;
 import com.opensymphony.xwork2.ActionSupport;
@@ -19,7 +19,7 @@ public class LoginAction extends ActionSupport {
 	private String username;
 	private String password;
 
-	//判断用户名和密码是否正确。
+	//判断用户名和密码是否正确�?
 	//在xml中配置action，根据返回结果不同配置多个result
 	public String loginin() {
 		String str;

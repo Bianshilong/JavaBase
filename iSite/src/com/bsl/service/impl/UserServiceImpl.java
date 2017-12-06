@@ -42,4 +42,10 @@ public class UserServiceImpl implements UserService{
 		return list;
 	}
 
+	@Override
+	public List<User> findByNameAndPass() {
+		List<User> list = dao.getUserByNameAndPass();
+		return list;
+	}
+
 }

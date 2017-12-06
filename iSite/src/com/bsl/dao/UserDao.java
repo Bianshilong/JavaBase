@@ -10,5 +10,6 @@ public interface UserDao {
 	public void update(User user);
 	public void delete(User user);
 	public User getUserById(Long id);
+	public List<User> getUserByNameAndPass();
 	public List<User> getUserList();
 }
