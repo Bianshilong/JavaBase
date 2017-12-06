@@ -2,85 +2,25 @@ package com.bsl.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Repository;
 
 import com.bsl.dao.UserDao;
 import com.bsl.entity.User;
 
-public class UserDaoImpl implements UserDao {
-	
-	//要得到Hibernate的configuration对象，再得到sessionFactory对象，再得到session对象
-	private SessionFactory sessionFactory;
-	private Session session;
-	
-	public Session geSession() {
-		sessionFactory = new Configuration().configure().buildSessionFactory();
-		session = sessionFactory.openSession();
-		return session;
-	}
-	
-	//关闭session对象和sessionFactory对象
-	public void closeSession() {
-		if (session!=null) {
-			session.close();
-		}
-		if (sessionFactory!=null) {
-			sessionFactory.close();
-		}
-	}
-	//插入记录
+@Repository
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
+
 	@Override
-	public Long insert(User user) {
-		session=geSession();
-		Transaction transaction = session.beginTransaction();
-		Long id = (Long) session.save(user);
-		transaction.commit();
-		closeSession();
-		return id;
+	public List<User> findByNameAndPass(User user) {
+		List<User> list = find("select u from User u where u.username = ?0 and m.password=?1"
+				,user.getUsername(),user.getPassword());
+		return list;
 	}
-	//更新记录
+
 	@Override
-	public void update(User user) {
-		session=geSession();
-		Transaction transaction = session.beginTransaction();
-		session.update(user);
-		transaction.commit();
-		closeSession();
-	}
-	//删除记录
-	@Override
-	public void delete(User user) {
+	public User findByName(String name) {
 		// TODO Auto-generated method stub
-
+		return null;
 	}
-
-	@Override
-	public User getUserById(Long id) {
-		session=geSession();
-		User user = session.get(User.class, id);
-		closeSession();
-		return user;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<User> getUserList() {
-		session=geSession();
-		List<User> list = session.createQuery("form User").getResultList();
-		closeSession();
-		return list;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override			//通过用户名和密码来查找
-	public List<User> getUserByNameAndPass() {
-		session=geSession();
-		List<User> list = session.createQuery("select u.username,u.password from User u").getResultList();
-		session.close();
-		return list;
-	}
-
+	
 }

@@ -4,12 +4,11 @@ import java.util.List;
 
 import com.bsl.entity.User;
 
-public interface UserDao {
+public interface UserDao extends BaseDao<User>{
 	
-	public Long insert(User user);
-	public void update(User user);
-	public void delete(User user);
-	public User getUserById(Long id);
-	public List<User> getUserByNameAndPass();
-	public List<User> getUserList();
+	//根据用户名和密码查询
+	List<User> findByNameAndPass(User user);
+	
+	//根据用户名查找
+	User findByName(String name);
 }

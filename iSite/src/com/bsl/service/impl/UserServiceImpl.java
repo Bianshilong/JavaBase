@@ -2,10 +2,13 @@ package com.bsl.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.bsl.dao.UserDao;
 import com.bsl.entity.User;
 import com.bsl.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService{
 	private UserDao dao;
 
