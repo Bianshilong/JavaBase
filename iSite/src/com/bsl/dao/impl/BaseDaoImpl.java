@@ -1,11 +1,12 @@
 package com.bsl.dao.impl;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Query;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.bsl.dao.BaseDao;
 
@@ -13,46 +14,48 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter@Setter
+@Repository
 public class BaseDaoImpl<T> implements BaseDao<T> {
 	
+	@Autowired
 	private SessionFactory SessionFactory;
 	
 
-	@Override
-	public T get(Class<T> entityClazz, Serializable id) {
+	@Override		//根据ID加载实体
+	public T get(Class<T> entityClazz, Long id) {
 		return (T)getSessionFactory().getCurrentSession().get(entityClazz, id);
 	}
 
-	@Override
-	public Serializable save(T entity) {
-		return getSessionFactory().getCurrentSession().save(entity);
+	@Override		//保存实体
+	public Long save(T entity) {
+		return (Long) getSessionFactory().getCurrentSession().save(entity);
 	}
 
-	@Override
+	@Override		//更新实体
 	public void update(T entity) {
 		getSessionFactory().getCurrentSession().saveOrUpdate(entity);
 	}
 
-	@Override
+	@Override		// 删除实体
 	public void delete(T entity) {
 		getSessionFactory().getCurrentSession().delete(entity);
 	}
 	
-	@Override
-	public void delete(Class<T> entityClazz, Serializable id) {
-		getSessionFactory().getCurrentSession().createQuery("delete"
-				+ entityClazz.getSimpleName()+"en where en.id = ?0")
+	@Override		//根据ID删除实体
+	public void delete(Class<T> entityClazz, Long id) {
+		getSessionFactory().getCurrentSession().createQuery("delete "
+				+ entityClazz.getSimpleName()+" en where en.id = ?0")
 				.setParameter("0", id)
 				.executeUpdate();
 		
 	}
 
-	@Override
+	@Override		//获取所有实体
 	public List<T> findAll(Class<T> entityClazz) {
-		return find("select en from"+entityClazz.getSimpleName()+"en");
+		return find("select en from "+entityClazz.getSimpleName()+" en");
 	}
 
-	@Override
+	@Override		//获取实体总数
 	public long findCount(Class<T> entityClazz) {
 		// TODO Auto-generated method stub
 		return 0;

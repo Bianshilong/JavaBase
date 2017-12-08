@@ -2,6 +2,7 @@ package com.bsl.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bsl.dao.UserDao;
@@ -10,45 +11,40 @@ import com.bsl.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{
+	
+	@Autowired
 	private UserDao dao;
 
-	//新加用户
-	@Override
+	@Override			//添加用户
 	public Long add(User user) {
-		long id = dao.insert(user);
+		Long id = dao.save(user);
 		return id;
 	}
-	
-	//修改用户
-	@Override
+
+	@Override			//更新用户
 	public void update(User user) {
 		dao.update(user);
-		
 	}
-	//删除用户
-	@Override
+
+	@Override			//删除用户
 	public void delete(User user) {
 		dao.delete(user);
-		
 	}
 
-	//查找单个用户
-	@Override
-	public User selectOnlyOne(long id) {
-		User user = dao.getUserById(id);
-		return user;
-	}
+//	@Override			//通过用户名和密码来查找用户，主要用来验证登录
+//	public List<User> getByNameAndPass(User user) {
+//		List<User> list = dao.findByNameAndPass(user);
+//		return list;
+//	}
 
-	@Override
+	@Override			//查询所有用户，可以不重写
 	public List<User> selectAll() {
-		List<User> list = dao.getUserList();
-		return list;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	@Override
-	public List<User> findByNameAndPass() {
-		List<User> list = dao.getUserByNameAndPass();
-		return list;
+	//判断是否登录
+	public boolean validLogin(User user) {
+		return dao.findByNameAndPass(user).size()>0;
 	}
-
 }

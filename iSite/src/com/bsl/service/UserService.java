@@ -6,10 +6,20 @@ import com.bsl.entity.User;
 
 public interface UserService {
 	
-	public Long add(User user);
-	public void update(User user);
-	public void delete(User user);
-	public User selectOnlyOne(long id);
-	public List<User> findByNameAndPass();
-	public List<User> selectAll();
+	//服务层，添加用户
+	Long add(User user);
+	
+	//更新用户
+	void update(User user);
+	
+	//删除用户
+	void delete(User user);
+
+	//通过用户名和密码来查找用户，主要用来验证登录
+	//List<User> getByNameAndPass(User user);
+	
+	//查询所有用户，可以不重写
+	List<User> selectAll();
+	
+	boolean validLogin(User user);
 }

@@ -41,14 +41,6 @@ public class User {
 	
 	private String email;
 	private String sex;
-	
-	//集合被注释了
-	/*@ElementCollection
-	@CollectionTable(name="habirat",joinColumns=@JoinColumn(name="user_id"))
-	@Column(name="habirat_name")
-	@OrderColumn(name="list_order")
-	private List<String> habirat;
-	*/
 	@Temporal(TemporalType.DATE)
 	private Date birth;
 	
@@ -57,15 +49,19 @@ public class User {
 	}
 
 	//提供有参的构造函数
-	public User(Long id,String username, String password, String email, String sex, /*List<String> habirat,*/ Date birth) {
+	public User(String username, String password, String email, String sex, Date birth) {
 		super();
-		this.id=id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.sex = sex;
-//		this.habirat = habirat;
 		this.birth = birth;
 	}
+
+	public User(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
+	
 	
 }

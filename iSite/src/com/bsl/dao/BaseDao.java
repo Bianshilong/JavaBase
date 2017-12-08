@@ -1,15 +1,14 @@
 package com.bsl.dao;
 
-import java.io.Serializable;
 import java.util.List;
 
 public interface BaseDao<T> {
 
 	//根据ID加载实体
-	T get(Class<T> entityClazz,Serializable id);
+	T get(Class<T> entityClazz,Long id);
 	
 	//保存实体
-	Serializable save(T entity);
+	Long save(T entity);
 	
 	//更新实体
 	void update(T entity);
@@ -18,7 +17,7 @@ public interface BaseDao<T> {
 	void delete(T entity);
 	
 	//根据ID删除实体
-	void delete(Class<T> entityClazz,Serializable id);
+	void delete(Class<T> entityClazz,Long id);
 	
 	//获取所有实体
 	List<T> findAll(Class<T> entityClazz);

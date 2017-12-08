@@ -44,13 +44,4 @@
 			</value>
 		</property>
 	</bean>
-	
-<!-- 配置DAO组件的模板 -->
-<bean id="daoTemplate" abstract="true" lazy-init="true"
-	p:sessionFactory-ref="sessionFactory"/>
-
-<bean id="userDao"
-	class="com.bsl.dao.impl.UserDaoImpl"
-	parent="daoTemplate"/>
-
 </beans>
