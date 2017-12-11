@@ -25,7 +25,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name="user")
+@Table(name="user_info")
 @Getter@Setter
 public class User {
 	
@@ -39,8 +39,13 @@ public class User {
 	@Column(nullable=false)
 	private String password;
 	
+	@Column(nullable=false)
 	private String email;
+	
+	@Column(nullable=false)
 	private String sex;
+	
+	@Column(nullable=false)
 	@Temporal(TemporalType.DATE)
 	private Date birth;
 	
