@@ -2,24 +2,28 @@ package com.bsl.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bsl.dao.UserDao;
 import com.bsl.entity.User;
 
-public interface UserService {
+@Service
+public class UserService {
 	
-	//服务层，添加用户
-	Long add(User user);
+	@Autowired
+	private UserDao dao;
 	
-	//更新用户
-	void update(User user);
+	public void add(User user) {
+		dao.insert(user);
+	}
 	
-	//删除用户
-	void delete(User user);
-
-	//通过用户名和密码来查找用户，主要用来验证登录
-	//List<User> getByNameAndPass(User user);
-	
-	//查询所有用户，可以不重写
-	List<User> selectAll();
-	
-	boolean validLogin(User user);
+	public boolean checklogin(User user) {
+		List<User> list = dao.byNameAndPass(user);
+		boolean flag =false;
+		if (list.size()>0) {
+			flag=true;
+		}
+		return flag;
+	}
 }

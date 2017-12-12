@@ -24,16 +24,18 @@ public class LoginController {
 	public String login(Vo_user vr) {
 		User user = new User(vr.getName(),vr.getPass());
 		String str=null;
-		if (userService.validLogin(user)) {
+		if (userService.checklogin(user)) {
 			str="success";
 		}
 		return str;
 	}
 	
 	//用户注册页面，注册成功后，显示信息
-	@RequestMapping(value="/register")
+	@RequestMapping(value="/regst")
 	public String register(Vo_user vr) {
-		User user = new User(vr.getName(),vr.getPass(),vr.getEmail(),vr.getSex(),vr.getBirth());
+		User user = new User();
+		user.setUsername(vr.getName());
+		user.setPassword(vr.getPass());
 		userService.add(user);
 		return "success";
 	}

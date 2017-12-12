@@ -39,29 +39,29 @@ public class User {
 	@Column(nullable=false)
 	private String password;
 	
-	@Column(nullable=false)
-	private String email;
-	
-	@Column(nullable=false)
-	private String sex;
-	
-	@Column(nullable=false)
-	@Temporal(TemporalType.DATE)
-	private Date birth;
-	
+//	@Column(nullable=false)
+//	private String email;
+//	
+//	@Column(nullable=false)
+//	private String sex;
+//	
+//	@Column(nullable=false)
+//	@Temporal(TemporalType.DATE)
+//	private Date birth;
+//	
 	//提供无参的构造函数
 	public User() {
 	}
 
 	//提供有参的构造函数
-	public User(String username, String password, String email, String sex, Date birth) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.email = email;
-		this.sex = sex;
-		this.birth = birth;
-	}
+//	public User(String username, String password, String email, String sex, Date birth) {
+//		super();
+//		this.username = username;
+//		this.password = password;
+//		this.email = email;
+//		this.sex = sex;
+//		this.birth = birth;
+//	}
 
 	public User(String username, String password) {
 		this.username = username;

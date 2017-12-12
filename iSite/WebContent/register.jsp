@@ -13,7 +13,7 @@
 <body>
 	<br/>
 	<br/>
-	<div class="container" style="width: 500px;">
+	<!-- <div class="container" style="width: 500px;">
 		<h2>注册信息</h2>
 		<form action="register.action" method="post">
 			<div class="form-group">
@@ -44,6 +44,13 @@
 			<input type="submit" value="提交" />&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="submit" value="重置" />
 		</form>
-	</div>
+	</div> -->
+	<form action="regst.action" method="post">
+		<input type="text" name="name"/><br/>
+		<input type="password" name="pass" /><br/>
+		<input type="submit" value="提交" />
+		<input type="reset" value="重置" />
+	</form>
+	
 </body>
 </html>
