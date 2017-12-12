@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>购物网站</title>
 <link rel="short cut icon" href="/iSite/favicon.ico" />
+<title>首页</title>
 </head>
 <body>
-	<jsp:forward page="main.jsp"></jsp:forward>
+	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

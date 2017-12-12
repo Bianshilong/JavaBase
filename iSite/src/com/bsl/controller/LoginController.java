@@ -35,6 +35,6 @@ public class LoginController {
 	public String register(Vo_user vr) {
 		User user = new User(vr.getName(),vr.getPass(),vr.getEmail(),vr.getSex(),vr.getBirth());
 		userService.add(user);
-		return "";
+		return "success";
 	}
 }

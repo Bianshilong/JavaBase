@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>购物网站</title>
-<link rel="short cut icon" href="/iSite/favicon.ico" />
+<title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page="main.jsp"></jsp:forward>
+	Success!!!
 </body>
 </html>
