@@ -38,24 +38,22 @@ public class User {
 	private String email;
 	
 	@Column(nullable=false)
-	private String sex;
+	private String tell;
 	
 	@Column(nullable=false)
-	@Temporal(TemporalType.DATE)
-	private Date birth;
+	private String sex;
 	
 	//提供无参的构造函数
 	public User() {
 	}
 
 //	提供有参的构造函数
-	public User(String username, String password, String email, String sex, Date birth) {
+	public User(String username, String password, String email, String sex) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.sex = sex;
-		this.birth = birth;
 	}
 
 	public User(String username, String password) {

@@ -46,11 +46,11 @@ function checkName() {
 function checkPwd1() {
 	var password =$('#pwd').val();
 	if (password.replace(/\s/g, "") == "") {
-		$('#error_pass').html("密码不能为空，请重新输入");
+		$('#error_pwd').html("密码不能为空，请重新输入");
 	}else if(password.length<8){
-		$('#error_pass').html("密码太短，请重新输入");
+		$('#error_pwd').html("密码太短，请重新输入");
 	}else{
-		$('#error_pass').html("√");
+		$('#error_pwd').html("√");
 	}
 }
 
@@ -59,9 +59,9 @@ function checkPwd2() {
 	var password = $('#pwd').val();
 	var password2 = $('#pwd2').val();
 	if (password != password2) {
-		$('#error2_pass').html("密码不一致");
+		$('#error2_pwd').html("密码不一致");
 	}else {
-		$('#error2_pass').html("√");
+		$('#error2_pwd').html("√");
 	}
 }
 
@@ -89,11 +89,4 @@ function checkEmail() {
 	}else{
 		$('#error_email').html("√");
 	}
-}
-
-//检查输入的生日是否合法
-function checkBirth(){
-	var birth =$('#birth').val();
-	
-	
 }

@@ -1,6 +1,5 @@
 package com.bsl.vo;
 
-import java.util.Date;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,8 +7,9 @@ import lombok.Setter;
 public class Vo_user {
 	
 	private String name;
+	private String pass1;
 	private String pass;
 	private String email;
+	private String tell;
 	private String sex;
-	private Date birth;
 }

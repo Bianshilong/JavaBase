@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bsl.entity.User;
-import com.bsl.service.UserService;
+import com.bsl.service.IUserService;
 import com.bsl.vo.Vo_user;
 
 import lombok.Getter;
@@ -18,7 +18,7 @@ import lombok.Setter;
 public class LoginController {
 
 	 @Autowired
-	private UserService userService;
+	private IUserService userService;
 	// 验证用户登录的方法
 	@RequestMapping(value = "/login")
 	public String login(Vo_user vr) {
@@ -36,6 +36,9 @@ public class LoginController {
 		User user = new User();
 		user.setUsername(vr.getName());
 		user.setPassword(vr.getPass());
+		user.setEmail(vr.getEmail());
+		user.setTell(vr.getTell());
+		user.setSex(vr.getSex());
 		userService.add(user);
 		return "success";
 	}

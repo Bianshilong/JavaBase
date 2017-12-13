@@ -9,8 +9,8 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="js/register.js"></script> -->
-<script type="text/javascript">
+<script type="text/javascript" src="js/register.js"></script>
+<!-- <script type="text/javascript">
 function checkName() {
 	// 只简单的判断用户名的长度
 	var name =$('#name').val();
@@ -22,7 +22,7 @@ function checkName() {
 		$('#error_name').html("√");
 	}
 }
-</script>
+</script> -->
 </head>
 <body>
 	<br/>
@@ -38,7 +38,7 @@ function checkName() {
 			<div class="form-group">
 				<label for="password">密码:</label> 
 				<input type="password" class="form-control" id="pwd" maxlength="12"
-				placeholder="Enter password (字母、数字8-12位) " name="pass" onblur="checkPwd1()"><span id="error_pwd"></span>
+				placeholder="Enter password (字母、数字8-12位) " name="pass1" onblur="checkPwd1()"><span id="error_pwd"></span>
 			</div>
 			<div class="form-group">
 				<label for="pwd">密码确认:</label> 
@@ -51,7 +51,7 @@ function checkName() {
 				 placeholder="Enter email" name="email" onblur="checkEmail()"><span id="error_email"></span>
 			</div>
 			<div class="form-group">
-				<label for="tell">邮箱:</label> 
+				<label for="tell">手机号码:</label> 
 				<input type="text" class="form-control" id="tell" maxlength="15"
 				 placeholder="Enter phoneNumber" name="tell" onblur="checkTell()"><span id="error_tell"></span>
 			</div>
@@ -60,20 +60,10 @@ function checkName() {
 					<label><input type="radio" id="sex" checked="checked" name="sex">男</label>&nbsp;&nbsp;
 					<label><input type="radio" id="sex"  name="sex">女</label>
 			</div>
-			<div class="form-group">
-				<label for="birth">出生日期:</label> 
-				<input type="date" class="form-control" id="birth" name="birth" onblur="checkBirth()"><span id="error_birth"></span>
-			</div>
 			<input type="submit" value="提交" />&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="submit" value="重置" />
 		</form>
 	</div>
-	<!-- <form action="regst.action" method="post">
-		<input type="text" name="name"/><br/>
-		<input type="password" name="pass" /><br/>
-		<input type="submit" value="提交" />
-		<input type="reset" value="重置" />
-	</form> -->
-	
+		
 </body>
 </html>

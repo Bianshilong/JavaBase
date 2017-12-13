@@ -1,25 +1,29 @@
-package com.bsl.service;
+package com.bsl.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bsl.dao.UserDao;
+import com.bsl.dao.IUserDao;
 import com.bsl.entity.User;
+import com.bsl.service.IUserService;
 
 @Service
-public class UserService {
+public class UserServiceImpl implements IUserService {
 	
+
 	@Autowired
-	private UserDao dao;
+	private IUserDao dao;
 	
+	@Override
 	public void add(User user) {
-		dao.insert(user);
+		dao.save(user);
 	}
 	
+	@Override
 	public boolean checklogin(User user) {
-		List<User> list = dao.byNameAndPass(user);
+		List<User> list = dao.findByNameAndPass(user);
 		boolean flag =false;
 		if (list.size()>0) {
 			flag=true;
